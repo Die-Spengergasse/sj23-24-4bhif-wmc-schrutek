@@ -1,0 +1,21 @@
+<p>Welcome!</p>
+
+<hr>
+<label>User Name:</label>
+<input [(ngModel)]="_username" />
+
+<hr>
+<label>Klasse:</label>
+<ul>
+    <li *ngFor="let c of _classrooms">
+        <button (click)="login(c)">{{c.name}}</button>
+    </li>
+</ul>
+
+
+
+<!-- <select [(ngModel)]="_selectedClassroom" (ngModelChange)="onChange($event)" name="sel2">
+    <option *ngFor="let i of _classrooms">{{i.name}}</option>
+</select>
+<hr>
+<button (click)="login()">Login</button> -->

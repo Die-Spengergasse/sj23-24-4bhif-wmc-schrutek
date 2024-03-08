@@ -1,0 +1,16 @@
+.message-frame {
+    max-width: 80%;
+    min-width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px #4599ff;
+    background-color: rgb(166, 215, 255);
+    border-radius: 10px;
+    float: left;
+}
+
+.own {
+    border: solid 1px #a7a7a7;
+    background-color: lightgray;
+    float: right;
+}

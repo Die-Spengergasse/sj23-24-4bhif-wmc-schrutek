@@ -10,7 +10,7 @@ export class App {
         this.fbs.loadProducts();
         this.fbs.getProducts().subscribe({ 
             next: (data: Product[]) => {  
-                data.forEach((data) => { console.log(data.Name); });
+                data.forEach((data) => { console.log(data.name); });
             },
             error: (err) => {
                 console.log(err);

@@ -1,0 +1,21 @@
+<div>
+    <div *ngIf="message.isOwn; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <div class="message-frame own">
+            <b><small>{{ message.username }}</small></b>
+            <br>
+                {{ message.body }}
+            <br/>
+            <small>{{ message.timeStamp }}</small>
+        </div>
+    </ng-template>
+    <ng-template #elseBlock>
+        <div class="message-frame">
+            <b><small>{{ message.username }}</small></b>
+            <br>
+                {{ message.body }}
+            <br/>
+            <small>{{ message.timeStamp }}</small>
+        </div>
+    </ng-template>
+</div>

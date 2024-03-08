@@ -3,11 +3,12 @@ import { Product } from '../model/product';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, Firestore } from 'firebase/firestore';
 import { BehaviorSubject, Observable, from } from 'rxjs';
+import { Repository } from '../intefaces/repository';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FirebaseService {
+export class FirebaseService implements Repository {
 
   private products: Product[] = [];
   private db: Firestore; 
@@ -28,15 +29,25 @@ export class FirebaseService {
   }
 
   public loadProducts(): void {
-    const querySnapshot = getDocs(collection(this.db, "products"));
-
+    // products
+    const querySnapshot = getDocs(collection(this.db, "/products"));
     querySnapshot.then((snapshot) => { 
         snapshot.forEach((data) => { 
             let p: Product = data.data() as Product;
-            this.products.push(p);
+            console.log(data.data());
+
+            const querySnapshot2 = getDocs(collection(this.db, `/products/${data.id}/carts`));
+            querySnapshot2.then((snapshot2) => { 
+              snapshot2.forEach((data2) => { 
+                  console.log(data2.data());
+              })
+
+              this.products.push(p);
         })
         this.productsObservable.next(this.products);
     });
+  });
+
   }
 
   public getProducts(): Observable<Product[]> {

@@ -17,5 +17,5 @@ const querySnapshot = await getDocs(collection(db, "products"));
 querySnapshot.forEach((doc) => {
     const p: Product = doc.data() as Product;
     console.log(`ID: ${doc.id}`);
-    console.log(`NAME: ${p.Name}  -  PRICE: ${p.Price}€`);
+    console.log(`NAME: ${p.name}  -  PRICE: ${p.price}€`);
 });

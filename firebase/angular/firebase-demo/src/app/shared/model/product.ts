@@ -1,4 +1,3 @@
 export class Product {
-  public Name: string = "";
-  public Price: number = 0;
+  constructor(public id: number, public name: string, public price: number) { }
 }

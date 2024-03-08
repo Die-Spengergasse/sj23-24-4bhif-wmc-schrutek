@@ -1,0 +1,9 @@
+<div>
+    <h3>Klasse: {{ classroomId }}</h3>
+
+    <h2>Messages:</h2>
+    <div *ngFor="let message of _messages; index as i">
+        <app-message [message]="message"></app-message>
+    </div>
+    <app-message-form></app-message-form>
+</div>

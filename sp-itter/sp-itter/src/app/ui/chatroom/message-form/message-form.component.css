@@ -1,0 +1,23 @@
+.message-form {
+    min-width: 100%;
+    max-width: 100%;
+    float: inline-end;
+    padding: 30px;
+    background-color: lightgray;
+}
+
+.input-div {
+    padding: 10px;
+    margin: 10px;
+}
+
+.input-field {
+    padding: 10px;
+    margin: 30px;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+.send-button {
+    padding: 10px;
+}

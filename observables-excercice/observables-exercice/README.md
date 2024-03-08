@@ -1,27 +1,51 @@
-# ObservablesExercice
+# PLÜ
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+x
 
-## Development server
+## TODOs
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Projekt anlegen
+* Ins richtige Verzeichnis wechseln
+* Komponente `navigation` in `ui` anlegen
+* Komponente `pizza-configurator` in `ui` anlegen
+* Komponente `pizza-content` in `ui` anlegen
+* Komponente `pizza-price` in `ui` anlegen
+* Komponente `pizza-result` in `ui` anlegen
+* Service `pizza-calculator` in `services` anlegen
+* Service in `app.module.ts` als `Provider` registrieren
+* Alle Komponenten folgenbdermaßen stacken
+  * `pizza-content` enthält `pizza-configurator`, `pizza-result` und `pizza-price`
+* `pizza-result` enthält die Ausgabe für **Salami**, **Schinken**, **Käse** und eine mögliche **Fehlermeldung**
+* `pizza-configurator` enthält jeweils +/- Buttons für **Salami**, **Schinken**, **Käse** und ein beschreibendes Label (siehe Bild ganz unten)
+* 
 
-## Code scaffolding
+## CSS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Folgendes Code-Snipet in alle Komponenten setzen
 
-## Build
+```css```
+.frame {
+    margin: 4px;
+    padding: 4px;
+    border: solid 2px;
+}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Folgendes Code-Snipet in die Komponente `pizza-configurator` setzen
 
-## Running unit tests
+```css```
+label { 
+    display: inline-block;
+    width: 150px; 
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+button {
+    margin: 4px;
+}
+```
 
-## Running end-to-end tests
+### Ergebnis
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Deine App sollte nun so aussehen
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![alt text](SC01.png)
