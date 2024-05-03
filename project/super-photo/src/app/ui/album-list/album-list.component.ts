@@ -28,4 +28,5 @@ export class AlbumListComponent {
       this.albumDtoList = data as AlbumDto[];
     })
   }
+
 }

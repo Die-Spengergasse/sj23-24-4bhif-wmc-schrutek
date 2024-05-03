@@ -26,5 +26,4 @@ export class UsersComponent {
     console.log(error);
     return throwError(()=>new Error(''));
   }
-
 }
